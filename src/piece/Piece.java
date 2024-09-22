@@ -1,5 +1,7 @@
 package piece;
 
+import main.Board;
+
 import java.awt.image.BufferedImage;
 
 public class Piece {
@@ -11,10 +13,16 @@ public class Piece {
 
 
     public Piece(int color, int col, int row){
-
         this.color = color;
         this.col = col;
         this.row = row;
-        x =
+        x = getX(col);
+        y = getY(row);
+    }
+    public int getX(int col){
+        return col * Board.SQUARE_SIZE;
+    }
+    public int getY(int row){
+        return row * Board.SQUARE_SIZE;
     }
 }
