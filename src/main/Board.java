@@ -24,6 +24,13 @@ public class Board {
                 g2.fillRect(col*SQUARE_SIZE, row*SQUARE_SIZE, SQUARE_SIZE, SQUARE_SIZE);
 
             }
+
+            if (c ==0){
+                c = 1;
+            } else {
+                c = 0;
+            }
+
         }
     }
 }
